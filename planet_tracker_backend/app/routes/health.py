@@ -1,10 +1,19 @@
 from flask_smorest import Blueprint
 from flask.views import MethodView
 
-blp = Blueprint("Healt Check", "health check", url_prefix="/", description="Health check route")
+# Health endpoint under /api/health with proper tag/description
+blp = Blueprint("Health", "health", url_prefix="/api/health", description="Health check route for Planet Tracker API")
 
-
-@blp.route("/")
+@blp.route("")
 class HealthCheck(MethodView):
+    """
+    Simple health check endpoint.
+
+    Returns:
+      JSON: {"status": "ok"}
+    """
+
+    # PUBLIC_INTERFACE
     def get(self):
-        return {"message": "Healthy"}
+        """Return basic service health status."""
+        return {"status": "ok"}
