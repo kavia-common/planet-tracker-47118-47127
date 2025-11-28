@@ -13,7 +13,11 @@ NEO item schema:
 Planet item schema:
 - name, right_ascension, declination, distance_au
 
-CORS is enabled broadly for /api/* and /docs* with Access-Control-Allow-Origin: *.
+CORS:
+- Enabled for /api/* and /docs*.
+- Default origin is "*" for preview/local development.
+- To restrict to a specific preview origin, set PREVIEW_ORIGIN in the environment (see .env.example), e.g.:
+  PREVIEW_ORIGIN=https://<your-preview-host>:3000
 
 Local development:
 - Backend runs on port 3001, frontend on 3000.
