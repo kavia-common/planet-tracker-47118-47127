@@ -8,6 +8,9 @@ if __name__ == "__main__":
     Binds to 0.0.0.0 so the server is reachable from preview environment.
     Port defaults to 3001 to match the frontend expectation, but can be overridden
     via the PORT environment variable.
+
+    CORS is configured in app/__init__.py for /api/* and /docs*, allowing broad origins,
+    which is suitable for preview. For production, restrict origins via environment.
     """
     host = os.getenv("HOST", "0.0.0.0")
     try:

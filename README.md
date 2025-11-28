@@ -13,4 +13,4 @@ NEO item schema:
 Planet item schema:
 - name, right_ascension, declination, distance_au
 
-CORS is enabled broadly for /api/*.
+CORS is enabled broadly for /api/* and /docs*, and the server binds to 0.0.0.0 on port 3001 by default (configurable via HOST/PORT).
