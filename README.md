@@ -14,3 +14,7 @@ Planet item schema:
 - name, right_ascension, declination, distance_au
 
 CORS is enabled broadly for /api/* and /docs*, and the server binds to 0.0.0.0 on port 3001 by default (configurable via HOST/PORT).
+
+Preview notes:
+- Ensure your frontend uses the exact HTTPS origin on port 3001 (e.g., https://<host>:3001). Set REACT_APP_API_BASE_URL in the frontend .env accordingly.
+- Mixed content (https frontend -> http backend) will be blocked by the browser.
