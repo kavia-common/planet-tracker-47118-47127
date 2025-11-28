@@ -11,6 +11,10 @@ class HealthCheck(MethodView):
 
     Returns:
       JSON: {"status": "ok"}
+
+    Usage notes:
+      This endpoint is used by the frontend as a quick probe to verify backend availability
+      and to improve error messages when network or CORS issues occur.
     """
 
     # PUBLIC_INTERFACE
